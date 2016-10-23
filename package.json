@@ -1,0 +1,38 @@
+{
+  "name": "noFrontend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "compass-mixins": "^0.12.10",
+    "file-loader": "^0.9.0",
+    "image-webpack-loader": "^3.0.0",
+    "include-all": "^1.0.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "less-plugin-clean-css": "^1.5.1",
+    "node-sass": "^3.10.1",
+    "rc": "1.0.1",
+    "sails": "~0.12.8",
+    "sails-disk": "~0.10.9",
+    "sails-hook-webpack": "^2.0.4",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "debug": "node debug app.js",
+    "start": "NODE_ENV=development node app.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/grey/noFrontend.git"
+  },
+  "author": "grey",
+  "license": ""
+}
