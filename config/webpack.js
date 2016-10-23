@@ -37,6 +37,7 @@ const configs = { // webpack config begin here
     path: path.resolve(__dirname, '../.tmp/public'), // sails.js public path
     filename: 'bundle.js' // or 'bundle-[hash].js'
   },
+  devtool: "#inline-source-map",
   debug: debug,
   plugins: plugins,
   module: {
