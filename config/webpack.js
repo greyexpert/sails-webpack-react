@@ -6,7 +6,6 @@ const LessPluginCleanCSS = require('less-plugin-clean-css');
 const debug = process.env.NODE_ENV === 'development';
 
 const entry = [
-  path.resolve(__dirname, '../assets/index.html'),
   path.resolve(__dirname, '../assets/js/index.js') // set your main javascript file
 ];
 const plugins = [
@@ -21,7 +20,7 @@ if (debug) {
 
   // HMR plugin
   plugins.push(new webpack.HotModuleReplacementPlugin({
-    multiStep: true
+    //multiStep: true
   }));
 } else {
   // Minify bundle (javascript and css)
