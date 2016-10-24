@@ -5,8 +5,10 @@ const LessPluginCleanCSS = require('less-plugin-clean-css');
 
 const debug = process.env.NODE_ENV === 'development';
 
+const assetsDir = path.resolve(__dirname, '../client');
+
 const entry = [
-  path.resolve(__dirname, '../assets/js/index.js') // set your main javascript file
+  assetsDir // set your main javascript file
 ];
 const plugins = [
   // prevents the inclusion of duplicate code into your bundle
@@ -15,6 +17,7 @@ const plugins = [
 
 if (debug) {
   // add this entries in order to enable webpack HMR in browser
+  entry.push('react-hot-loader/patch');
   entry.push('webpack/hot/dev-server');
   entry.push('webpack-dev-server/client?http://localhost:3000/');
 
@@ -55,7 +58,7 @@ const configs = { // webpack config begin here
         test: /\.css$/, // load CSS files
         loaders: [
           'style', // npm install --save style-loader
-          'css?root=' + __dirname + '/../assets', // npm install --save css-loader
+          'css?root=' + assetsDir, // npm install --save css-loader
           'autoprefixer?browsers=last 2 versions' // npm install --save autoprefixer-loader
         ]
       },
@@ -108,7 +111,7 @@ const configs = { // webpack config begin here
   },
   sassLoader: { // config sass-loader
     includePaths: [
-      path.resolve(__dirname, '../assets/'),
+      assetsDir,
       // if you want to use compass
       // npm install --save compass-mixins
       path.resolve(__dirname, '../node_modules/compass-mixins/lib')
