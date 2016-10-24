@@ -4,5 +4,8 @@
   },
   "hooks": {
     "grunt": false
+  },
+  "log": {
+    "level": "warn"
   }
 }

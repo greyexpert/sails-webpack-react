@@ -55,6 +55,11 @@ try {
   }
 }
 
+if (process.env.NODE_ENV === 'development') {
+  sails.on('hook:sails-hook-webpack:after-build', function() {
+      console.info('\n\n\n Dev server: http://localhost:3000 \n\n\n');
+  });
+}
 
 // Start server
 sails.lift(rc('sails'));

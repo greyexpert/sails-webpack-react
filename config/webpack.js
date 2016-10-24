@@ -156,7 +156,13 @@ module.exports.webpack = {
         '*': {
           target: 'http://localhost:1337'
         }
-      }
+      },
+      stats: {
+        colors: true,
+        chunks: false,
+        version: false,
+        assets: false,
+      },
     }
   },
   watchOptions: {
